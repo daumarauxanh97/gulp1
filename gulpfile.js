@@ -35,3 +35,15 @@ gulp.task('images', function(){
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
 });
+var cleanCSS = require('gulp-clean-css');
+gulp.task('minify-css', () => {
+    return gulp.src('app/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/css'));
+});
+var cleanHTML =require('gulp-htmlmin');
+gulp.task('minify-html', () => {
+    return gulp.src('app/*.html')
+        .pipe(cleanHTML({ collapseWhitespace: true }))
+        .pipe(gulp.dest('dist/html'));
+});
