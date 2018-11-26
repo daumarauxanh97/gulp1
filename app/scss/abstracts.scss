@@ -1,0 +1,64 @@
+//variables
+//width-height
+$w640:640px;
+$w590:590px;
+$w580:580px;
+$w540:540px;
+$h425:425px;
+$h420:420px;
+$h300:300px;
+$px:0px;
+//font-size
+$fs16:16px;
+$fs18:18px;
+$fs20:20px;
+$fs22:22px;
+$fs24:24px;
+$fs26:26px;
+$fs28:28px;
+$fs30:30px;
+$fs32:32px;
+$fs34:34px;
+$fs36:36px;
+$fs38:38px;
+//colors
+$black:black;
+$white:white;
+//mixin
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-center-ho{
+  display: flex;
+  align-items: center;
+}
+@mixin flex-row{
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex-around{
+  display: flex;
+  justify-content: space-around;
+}
+@mixin padding($pdt:0px,$pdr:0px,$pdb:0px,$pdl:0px){
+  padding-top: $pdt+$px;
+  padding-right: $pdr +$px;
+  padding-bottom: $pdb +$px;
+  padding-left: $pdl +$px;
+}
+@mixin margin($mat:0px,$mar:0px,$mab:0px,$mal:0px){
+  margin-top: $mat +$px;
+  margin-right: $mar +$px;
+  margin-bottom: $mab +$px;
+  margin-left: $mal +$px;
+}
